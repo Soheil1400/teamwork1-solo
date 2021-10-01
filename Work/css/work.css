@@ -1,0 +1,135 @@
+@import "../../Element/color/color.css";
+@import "../../Element/font/font.css";
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+}
+.home__container{
+    width: 85vw;
+    height: 300vh;
+    margin: auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 2.5fr repeat(6,2.5fr) 2fr;
+    grid-template-areas:
+            "header"
+            "home--title"
+            "home--img1"
+            "home--img2"
+            "home--img3"
+            "home--img4"
+            "home--img5"
+            "home--img6"
+            "fotter"
+;
+    align-items: center;
+    justify-items: center;
+}
+.header{
+    grid-area: header;
+}
+.home--title{
+    grid-area: home--title;
+    background: #fff;
+    font-family: "Encode Sans",sans-serif;
+    width: 100%;
+    height: auto;
+    line-height: 45px;
+}
+.title--style{
+    color: var(--grey-color);
+}
+.title--dec{
+    font-family: "Encode Sans",sans-serif;
+    font-size: var(--small-fontsize);
+}
+.home--img1{
+    grid-area: home--img1;
+    position: relative;
+}
+.home--img2{
+    grid-area: home--img2;
+    position: relative;
+}
+.home--img3{
+    grid-area: home--img3;
+    position: relative;
+}
+.home--img4{
+    grid-area: home--img4;
+    position: relative;
+}
+.home--img5{
+    grid-area: home--img5;
+    position: relative;
+}
+.home--img6{
+    grid-area: home--img6;
+    position: relative;
+}
+.fotter{
+    grid-area: fotter;
+}
+.img--style{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+.overlay{
+    position: absolute;
+    cursor: pointer;
+    color: white;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 99.5%;
+}
+.img1:hover{
+    opacity: 0.8;
+    background-color: rgb(0,0,0);
+}
+.img2:hover{
+    opacity: 0.8;
+    background-color: rgb(255,4,55);
+}
+.img3:hover{
+    opacity: 0.8;
+    background-color: rgb(228,157,51);
+}
+.img4:hover{
+    opacity: 0.8;
+    background-color: rgb(57,97,143);
+}
+.img5:hover{
+    opacity: 0.8;
+    background-color: rgb(0,0,0);
+}
+.img6b{
+    position: absolute;
+    cursor: pointer;
+    color: white;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 99.5%;
+}
+.img6b:hover{
+    opacity: 1;
+}

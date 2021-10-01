@@ -1,0 +1,71 @@
+@import "../../Element/color/color.css";
+@import "../../Element/font/font.css";
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+}
+.home__container{
+    width: 85vw;
+    height: 300vh;
+    margin: auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 2fr repeat(6,3fr) 2.5fr;
+    grid-template-areas:
+            "header"
+            "offer--title"
+            "offer--img1"
+            "offer--dec1"
+            "offer--img2"
+            "offer--dec2"
+            "offer--img3"
+            "offer--dec3"
+            "fotter"
+;
+    align-items: center;
+    justify-items: center;
+}
+.header{
+    grid-area: header;
+}
+.offer--title{
+    grid-area: offer--title;
+    background: #fff;
+    font-family: "Encode Sans",sans-serif;
+    width: 100%;
+    height: auto;
+    line-height: 45px;
+}
+.title--style{
+    color: var(--grey-color);
+    font-family: "Encode Sans",sans-serif;
+    line-height: 50px;
+}
+.title--dec{
+    font-family: "Encode Sans",sans-serif;
+    font-size: var(--small-fontsize);
+}
+.offer--img1{
+    grid-area: offer--img1;
+}
+.offer--dec1{
+    grid-area: offer--dec1;
+}
+.offer--img2{
+    grid-area: offer--img2;
+}
+.offer--dec2{
+    grid-area: offer--dec2;
+}
+.offer--img3{
+    grid-area: offer--img3;
+}
+.offer--dec3{
+    grid-area: offer--dec3;
+}
+.fotter{
+    grid-area: fotter;
+}
