@@ -1,32 +1,35 @@
 @import "../../Element/color/color.css";
 @import "../../Element/font/font.css";
-*{
+
+* {
     margin: 0;
 }
-.home__container{
+
+.home__container {
     width: 85vw;
     height: 300vh;
     margin: auto;
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 0.5fr 2fr repeat(2,1fr) 4fr 3fr;
+    grid-template-rows: 0.5fr 2fr repeat(2, 1fr) 4fr 3fr;
     grid-template-areas:
             "header header"
             "contact--title contact--title"
             "address--img address--dec"
             "talk--img talk--dec"
             "contact--form contact--form"
-            "fotter fotter"
-;
+            "fotter fotter";
 }
-.header{
+
+.header {
     grid-area: header;
 }
-.contact--title{
+
+.contact--title {
     grid-area: contact--title;
     background: #fff;
-    font-family: "Encode Sans",sans-serif;
+    font-family: "Encode Sans", sans-serif;
     width: 100%;
     height: auto;
     line-height: 45px;
@@ -35,33 +38,60 @@
     align-content: center;
     justify-content: center;
 }
-.title--style{
+
+.title--style {
     color: var(--grey-color);
-    font-family: "Encode Sans",sans-serif;
+    font-family: "Encode Sans", sans-serif;
     line-height: 50px;
 }
-.title--dec{
-    font-family: "Encode Sans",sans-serif;
+
+.title--dec {
+    font-family: "Encode Sans", sans-serif;
     font-size: var(--small-fontsize);
 }
-.address--img{
+
+.address--img {
     grid-area: address--img;
     margin-left: 25px;
+    top: 0;
+    transition: 0.5s;
 }
-.address--dec{
+
+.address--dec {
     grid-area: address--dec;
     align-content: flex-start;
     justify-content: flex-start;
 }
-.talk--img{
+
+.address--dec::before {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: red;
+    display: block;
+    margin: auto;
+    transition: .5s;
+}
+
+.address--dec:hover::before {
+    width: 40%;
+}
+
+.address--img:hover{
+    top: 5px;
+}
+.talk--img {
     grid-area: talk--img;
 }
-.talk--dec{
+
+.talk--dec {
     grid-area: talk--dec;
 }
-.contact--form{
+
+.contact--form {
     grid-area: contact--form;
 }
-.fotter{
+
+.fotter {
     grid-area: fotter;
 }
